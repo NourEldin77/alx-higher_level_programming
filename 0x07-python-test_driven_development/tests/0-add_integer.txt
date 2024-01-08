@@ -1,0 +1,133 @@
+====================
+0-add_integer module
+====================
+
+Usage:
+
+`` add_integer(a, b) ``retrun addition of a and b
+
+import module
+
+>>> add_integer = __import__('0-add_integer').add_integer
+
+TestCase#1
+
+basic add
+
+>>> add_integer(1, 2)
+3
+
+TestCase#2
+
+basic add with one negative
+
+>>> add_integer(100, -2)
+98
+
+
+TestCase#3
+
+basic with only a argument
+
+>>> add_integer(2)
+100
+
+
+TestCase#4
+
+basic two negative
+
+>>> add_integer(-1, -5)
+-6
+
+
+TestCase#5
+
+two positive float
+
+>>> add_integer(1.5, 5.3)
+6
+
+TestCase#6
+
+only a argument float (negative)
+
+>>> add_integer(-5.5)
+93
+
+
+TestCase#6
+
+two negative float
+
+>>> add_integer(-1.5, -5.3)
+-6
+
+TestCase#7
+
+too long numbers
+
+>>> add_integer(9999999999999999999999999999999, 1)
+10000000000000000000000000000000
+
+TestCase#8
+
+only a too long numbers
+
+>>> add_integer(9999999999999999999999999999999)
+10000000000000000000000000000097
+
+
+TestCase#9
+
+a is not integer or float b is
+
+>>> add_integer("Not A Number", 5)
+Traceback (most recent call last):
+	...
+TypeError: a must be an interger
+
+
+
+TestCase#10
+
+a is integer or float b is not
+
+>>> add_integer(4, "School")
+Traceback (most recent call last):
+	...
+TypeError: b must be an integer
+
+
+TestCase#11
+
+give No arguments
+
+>>> add_integer()
+Traceback (most recent call last):
+	...
+TypeError: add_integer() missing 1 required positional argument: 'a'
+
+
+TestCase#12
+
+give None as a argument 
+
+>>> add_integer(None)
+Traceback (most recent call last):
+	...
+TypeError: a must be an interger
+
+
+TestCase#13
+
+give a list as a argument 
+
+>>> add_integer([1], 15)
+Traceback (most recent call last):
+	...
+TypeError: a must be an interger
+
+
+
+
