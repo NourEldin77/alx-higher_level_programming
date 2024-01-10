@@ -1,0 +1,159 @@
+#####################
+matrix_divided module
+#####################
+
+Usage: 
+
+`` matrix_divided(matrix, div) `` take a matrix and divide it on div number retruns new matrix
+
+import module
+
+>>> matrix_divided = __import__('2-matrix_divided').matrix_divided
+
+
+initilaize matrix 
+
+>>> matrix = [[1, 2, 3], [4, 5, 6]]
+
+#TestCase0
+
+Basic use 
+
+>>> matrix_divided(matrix, 3)
+[[0.33, 0.67, 1.0], [1.33, 1.67, 2.0]]
+>>> matrix
+[[1, 2, 3], [4, 5, 6]]
+
+
+
+#TestCase1
+
+Basic use with float 
+
+>>> matrix_divided(matrix, 0.5)
+[[2.0, 4.0, 6.0], [8.0, 10.0, 12.0]]
+>>> matrix
+[[1, 2, 3], [4, 5, 6]]
+
+
+#TestCase2
+
+Basic use negative (float)
+
+>>> matrix_divided(matrix, -0.5)
+[[-2.0, -4.0, -6.0], [-8.0, -10.0, -12.0]]
+>>> matrix
+[[1, 2, 3], [4, 5, 6]]
+
+
+#TestCase3
+
+big float
+
+>>> matrix_divided(matrix, float(999999999999))
+[[0.0, 0.0, 0.0], [0.0, 0.0, 0.0]]
+>>> matrix
+[[1, 2, 3], [4, 5, 6]]
+
+
+#TestCase4
+
+zero division
+
+>>> matrix_divided(matrix, 0)
+Traceback (most recent call last):
+  ...
+ZeroDivisionError: division by zero
+
+
+#TestCase5
+
+div is a string
+
+>>> matrix_divided(matrix, "Hello")
+Traceback (most recent call last):
+  ...
+TypeError: div must be a number
+
+
+#TestCase6
+
+div is a None
+
+>>> matrix_divided(matrix, None)
+Traceback (most recent call last):
+  ...
+TypeError: div must be a number
+
+
+#TestCase7
+
+there is no div
+
+>>> matrix_divided(matrix, )
+Traceback (most recent call last):
+	...
+TypeError: matrix_divided() missing 1 required positional argument: 'div'
+
+#TestCase8
+
+no arguments passed
+
+>>> matrix_divided()
+Traceback (most recent call last):
+	...
+TypeError: matrix_divided() missing 2 required positional arguments: 'matrix' and 'div'
+
+
+#TestCase9
+
+matrix is None
+
+>>> matrix_divided(None, 1)
+Traceback (most recent call last):
+  ...
+TypeError: matrix must be a matrix (list of lists) of integers/floats
+
+
+
+
+#TestCase10
+
+matrix is array
+
+>>> matrix = [1, 2, 3]
+>>> matrix_divided(matrix, 1)
+Traceback (most recent call last):
+  ...
+TypeError: matrix must be a matrix (list of lists) of integers/floats
+
+
+#TestCase11
+
+first element of matrix is string
+
+>>> matrix = ["Hello", [1, 2, 2]]
+>>> matrix_divided(matrix, 1)
+Traceback (most recent call last):
+  ...
+TypeError: matrix must be a matrix (list of lists) of integers/floats
+
+
+#TestCase12
+
+>>> matrix = [[1, 2, 3, 4], [1, 2, 3]]
+>>> matrix_divided(matrix, 1)
+Traceback (most recent call last):
+  ...
+TypeError: Each row of the matrix must have the same size
+
+
+#TestCase13
+
+>>> matrix = [[1, 0.5, "Green"], [20, 12, 14]]
+>>> matrix_divided(matrix, 1)
+Traceback (most recent call last):
+  ...
+TypeError: matrix must be a matrix (list of lists) of integers/floats
+
+
