@@ -1,0 +1,71 @@
+######################
+   my_list_module
+######################
+
+Usage:
+`` instance for MyList class first
+	my_list = Mylist()
+	my_list.append(int)
+	my_list.append(int)
+	my_list.print_sorted()
+``
+
+import module
+
+>>> MyList = __import__('1-my_list').MyList
+
+
+TestCase#0
+
+>>> my_list = MyList()
+>>> isinstance(my_list, list)
+True
+
+#TestCase#1
+
+>>> my_list = MyList()
+>>> hasattr(my_list, 'print_sorted')
+True
+
+TestCase#2
+
+Basic use
+
+>>> my_list = MyList()
+>>> my_list.append(20)
+>>> my_list.append(2)
+>>> print(my_list)
+[20, 2]
+
+TestCase#3
+
+>>> my_list = MyList()
+>>> my_list.append(20)
+>>> my_list.append(2)
+>>> my_list.print_sorted()
+[2, 20]
+
+
+TestCase#4
+
+>>> my_list = MyList()
+>>> my_list.append(20)
+>>> my_list.append(2)
+>>> my_list.append('H')
+>>> my_list.print_sorted()
+Traceback (most recent call last):
+	...
+TypeError: all elements must be of type int
+
+
+#TestCase#5
+
+>>> my_list = MyList()
+>>> my_list.print_sorted()
+[]
+
+
+#TestCase#6
+>>> my_list = MyList()
+>>> print(my_list)
+[]
