@@ -58,3 +58,58 @@ TypeError: John must be an integer
 
 TestCase#5
 
+>>> bg.area()
+Traceback (most recent call last):
+	...
+Exception: area() is not implemented
+
+
+TestCase#6
+>>> bg.integer_validator()
+Traceback (most recent call last):
+	...
+TypeError: BaseGeometry.integer_validator() missing 2 required positional arguments: 'name' and 'value'
+
+
+
+TestCase#7
+
+>>> bg.integer_validator("age")
+Traceback (most recent call last):
+	...
+TypeError: BaseGeometry.integer_validator() missing 1 required positional argument: 'value'
+
+
+
+TestCase#8
+
+>>> bg.integer_validator("age", 1)
+
+
+
+
+TestCase#9
+
+>>> bg.integer_validator("age", [3])
+Traceback (most recent call last):
+	...
+TypeError: age must be an integer
+
+
+
+TestCase#10
+
+>>> bg.integer_validator("age", True)
+Traceback (most recent call last):
+	...
+TypeError: age must be an integer
+
+
+TestCase#11
+
+>>> bg.integer_validator("age", [3, 4])
+Traceback (most recent call last):
+	...
+TypeError: age must be an integer
+
+
