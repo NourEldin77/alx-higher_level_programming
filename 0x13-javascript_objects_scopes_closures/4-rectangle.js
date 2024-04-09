@@ -4,12 +4,13 @@ class Rectangle {
     if (w > 0 && h > 0) {
       this.width = w;
       this.height = h;
+      this.printSymbol = 'X';
     }
   }
 
   print () {
     for (let i = 0; i < this.height; i++) {
-      console.log('X'.repeat(this.width));
+      console.log(this.printSymbol.repeat(this.width));
     }
   }
 
