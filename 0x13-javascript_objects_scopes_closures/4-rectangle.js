@@ -1,16 +1,25 @@
 #!/usr/bin/node
 class Rectangle {
+  static printSymbol = '';
   constructor (w, h) {
     if (w > 0 && h > 0) {
       this.width = w;
       this.height = h;
-      this.printSymbol = 'X';
     }
+  }
+
+  printSymbol (c) {
+    Rectangle.printSymbol = c;
+    return (c);
   }
 
   print () {
     for (let i = 0; i < this.height; i++) {
-      console.log(this.printSymbol.repeat(this.width));
+      if (Rectangle.printSymbol) {
+        console.log(Rectangle.printSymbol.repeat(this.width));
+      } else {
+        console.log('X'.repeat(this.width));
+      }
     }
   }
 

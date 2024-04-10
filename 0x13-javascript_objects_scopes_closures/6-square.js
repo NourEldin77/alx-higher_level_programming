@@ -8,7 +8,7 @@ class Square extends Squaree {
 
   charPrint (c) {
     if (c) {
-      super.printSymbol = c;
+      super.printSymbol(c);
     }
     super.print();
   }
